@@ -12,7 +12,12 @@ namespace CS321_W4D1_BookAPI.ApiModels
         {
             return new PublisherModel
             {
-                // TODO: map Publisher properties to corresponding PublisherModel properties
+                Id = publisher.Id,
+                Name = publisher.Name,
+                FoundedYear = publisher.FoundedYear,
+                CountryOfOrigin = publisher.CountryOfOrigin,
+                HeadQuartersLocation = publisher.HeadQuartersLocation,
+                Books = publisher.Books.ToApiModels().ToList()
             };
         }
 
